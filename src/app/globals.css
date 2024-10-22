@@ -2,26 +2,415 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+.header{
+  background-color: rgb(83, 15, 92);
+  padding: 40px;
+  align-items: center;  
+  display: flex; 
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  font-weight: bolder;
+  justify-content: flex-end;
+  font-family: sans-serif;
+  width: 100%;
+  
+}
+.header-button{
+  justify-content: flex-end;
+  display: flex;
+   gap: 30px;
+ 
+   
+}
+.logo{
+  border-radius: 50%;
+  border: 3px solid rgb(16, 179, 179);
+  width: 100px;
+  overflow: hidden;
+  position: absolute;
+  position: absolute; 
+  left: 30px; 
+  box-shadow: 0px 0px 20px  rgb(16, 179, 179);
+}
+.contact{
+  min-height: 100vh;
+   background: linear-gradient(to bottom, white,purple);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+.contact form{
+  width: 90%; 
+  max-width: 670px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 20px 20px 50px rgba(0,0,0,0.5);
+  border-radius: 15px;
+  background-color: white;
+  backdrop-filter: blur(10px);
+  flex-wrap: wrap;
+}
+.contact form h1{
+   color: rgb(7, 17, 26);
+   font-weight: bolder;
+   margin-top: 20px;
+   width: 500px;
+   text-align: center;
+   font-size: 30px;
+}
+.contact form input{
+  width: 290px;
+  height: 40px;
+  padding-left: 10px;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  margin-bottom: 10px;
+  background:none ;
+  border-bottom: 2px solid rgb(10, 11, 12);
+}
+.contact form input:placeholder{
+  color: rgb(0, 0, 0);
+
+}
+.contact form #lastname,
+.contact form #mobile{
+  margin-left:20px;
+}
+.contact form h4{
+  color: rgb(0, 0, 0);
+  font-weight: 300;
+  width: 600px;
+  margin-top: 20px;
+}
+.contact form textarea{
+  background: none;
+  border: none;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  font-weight: 200;
+  font-size: 15px;
+  padding: 10px;
+  outline: none;
+  min-width: 600px;
+  max-width: 600px;
+  min-height: 80px;
+  max-height: 80px;
+}
+textarea::-webkit-scrollbar{
+  width: 1em;
+}
+textarea::-webkit-scrollbar-thumb{
+  background-color: #f1f1f1;
+}
+.contact form #button{
+  border: none;
+  background-color: #aa51c5;
+  border-radius: 5%;
+  font-size: 20px;
+  transition: 0,3s;
+}
+.contact form #button:hover{
+  opacity: 0.7;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.footer {
+  background-color: #282c34;
+  padding: 20px 0;
+  color: #fff;
+  align-items: center;
+}
+.icon{
+  display: flex;
+  gap: 40px;
+  padding: 50px;
+  
+}
+.about{
+   min-height: 100vh; 
+   background: linear-gradient(to bottom, white ,purple);
+  
+}
+.about-us{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: bolder;
+  margin-top: 30px;
+  
+}
+.info{
+  display: flex;
+}
+h2{
+  font-size: 50px;
+  font-weight: bolder;
+  font-style: italic;
+  margin-left:20px ;
+  
+}
+.para{
+  font-size: 30px;
+  margin-left:20px ;
+}
+.about-image{
+  border: 2px solid black;
+  border-radius: 50%;
+  box-shadow: 0px 12px  40px rgb(80, 38, 80);
+  margin-right: 90px; 
+  width: 200px;
+  padding: 200px;
+  background-size: cover;
+  background-image: url("./data/about.png");
+  
+}
+.heading{
+  font-weight: bolder;
+  font-size: 40px;
+  text-align: center;
+  justify-content: center;
+}
+
+
+
+
+
+.parent-container{
+  width: 100%;
+  height: infinite;
+  background: linear-gradient(to bottom, white , purple);
+  padding: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+
+} 
+
+.child-container{
+  width: 400px;
+  max-width: 400px;
+  height: 550px;
+  background-color: rgb(248, 243, 243);
+  padding: 10px;
+  border-radius: 30px;
+  margin: 10px;
+   border: 2px solid #030405;
+   transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+.child-container:hover{
+  box-shadow: 0px 0px 60px #030405;
+  transform: translateY(-10px);
+}
+.image-container{
+   width: 100%;
+   height: 300px;
+   background-image: url("./data/AI.png");
+    background-size: cover;
+   border-radius:20px ;
+   border: 2px solid black;
+}
+.tittle{
+  font-size: 30px;
+  font-weight: bolder;
+  text-align: center;
+} 
+.description{
+  font-size: 14px;
+} 
+
+.button{
+  width:40% ;
+  margin:10px;
+  background-color: rgb(221, 142, 236);
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 20%;
+  font-weight: bolder;
+  font-size: 15px;
+}
+.image-containers{
+  width: 100%;
+  height: 300px;
+  background-image: url("./data/smartphone.jpg");
+   background-size: cover;
+  border-radius:20px ;
+  border: 2px solid black;
+}
+.image{
+  width: 100%;
+  height: 300px;
+  background-image: url("./data/Internet.png");
+   background-size: cover;
+  border-radius:20px ;
+  border: 2px solid black;
+}
+.Picture{
+  width: 100%;
+  height: 300px;
+  background-image: url("./data/computer.png");
+   background-size: cover;
+  border-radius:20px ;
+  border: 2px solid black;
+}
+.images-container{
+  width: 100%;
+  height: 300px;
+  background-image: url("./data/social-media.png");
+   background-size: cover;
+  border-radius:20px ;
+  border: 2px solid black;
+}
+.img-container{
+  width: 100%;
+  height: 300px;
+  background-image: url("./data/health-tecnology.jpg");
+   background-size: cover;
+  border-radius:20px ;
+  border: 2px solid black;
+}
+
+.parent{
+  background: linear-gradient(to bottom, white,purple);
+  display: flex;
+}
+.main{
+  font-size: 70px;
+  font-weight: bolder;
+  font-style: italic;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+.paragraph{
+  font-size: 40px;
+
+}
+.image-cont{
+  justify-content: center;
+  align-items: center;
+  margin-left: 350px;
+
+}
+.pictures{
+  margin-left: 150px;
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    
+    font-size: 6vw; 
+    padding: 20px;
+  }
+
+  .logo {
+    width: 15vw;  
+    left: 0;
+    margin-bottom: 10px;
+  }
+
+  .header-button {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .contact form {
+    width: 90%;  
+    padding: 20px;
+    height: auto;
+  }
+
+  .contact form input,
+  .contact form textarea {
+    width: 100%;  
+    margin-left: 0;
+  }
+
+  .about-us {
+    font-size: 8vw; 
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .about-image {
+    width: 40vw;  
+    height: 10px;
+    margin: 2px 20px;
+  }
+
+  .info {
+    flex-direction: column;  
+    align-items: center;
+  }
+
+  h2, .para {
+    font-size: 5vw;
+    text-align: center;
+  }
+
+  .parent-container {
+    flex-direction: column;  
+    align-items: center;
+  }
+
+  .child-container {
+    width: 90%;  
+    margin: 20px 0;
+  }
+  .main {
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+  }
+  .paragraph {
+    font-size: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .image-container, .image-containers, .image, .Picture, .images-container, .img-container {
+   
+    width: 100%;
+    height: 50%;  
+  }
+  .image-cont,.pictures{
+   height: 30%;
+   width: 100%;
+   align-items: center;
+   justify-content: center;
+   margin: 0px auto;
   }
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
+@media only screen and (min-width: 600px) and (max-width: 1024px) {
+  .header {
+    font-size: 4vw;
+    padding: 20px;
+  }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .contact form {
+    width: 90%;
+    padding: 30px;
+  }
+
+  .about-us {
+    font-size: 7vw;
+  }
+
+  h2, .para {
+    font-size: 4vw;
+  }
+
+  .child-container {
+    width: 80%;
   }
 }
